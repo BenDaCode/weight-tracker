@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "WeightTracker",
+  "short_name": "WeightTracker",
+  "version": "com.bduerrschmid.weighttracker",
+  "description": "Track your weight!",
+  "author": "Apache Cordova Team",
+  "icons": [],
+  "start_url": "index.html"
+}

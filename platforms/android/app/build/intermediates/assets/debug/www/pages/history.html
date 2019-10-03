@@ -1,0 +1,46 @@
+ 
+  <div class="row" style="border-bottom: .01em solid lightgrey;box-shadow: -2px 4px 15px -10px rgba(0,0,0,0.78)">
+    <div class="small-4 columns">
+        <b id="entries"></b> entries found
+    </div>
+    <div class="small-4 columns">
+        <button class="button small"><i class='fi-filter small'></i></button>
+    </div>
+    <div class="small-4 columns">
+       <button class="button small" onclick="openModal('addWeightModal')"><i class='fi-plus small'></i></button>
+    </div>
+ </div>
+
+ <div class="row" style="margin-top: 1em;max-height: 35em;overflow: scroll">
+    <div id="list" class="small-12 columns">
+  
+    </div>
+ </div>
+
+
+<div id="addWeightModal" class="modal">
+  <div class="modal-content">
+    <h2 >Add Weight</h2>
+    <div class="row">
+      <div class="small-12 columns"><input id="weightDate" type="date" placeholder="dd.mm.jjjj"></div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns"><input id="weightValue"type="text" placeholder="X.X kg"></div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <button class="button small" onclick="addWeight(document.getElementById('weightDate').value,document.getElementById('weightValue').value,'weight_history');closeModal('addWeightModal')">add</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  reloadHistory('weight_history');
+
+  /*window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }*/
+</script>

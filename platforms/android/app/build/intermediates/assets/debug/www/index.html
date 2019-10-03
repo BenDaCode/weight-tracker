@@ -1,0 +1,59 @@
+<html>
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="addons/foundation/css/foundation.css">
+    <link rel="stylesheet" type="text/css" href="addons/foundation-icons/foundation-icons.css">
+    <title>Weight Tracker</title>
+</head>
+<body>
+    <script src="addons/foundation/js/vendor/jquery.js"></script>
+    <script src="addons/foundation/js/vendor/foundation.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+ 
+        <div class="row topbar">
+            <div class="small-8 columns">
+                <b class="name">WEIGHT TRACKER</b>
+            </div>
+            <div id="pageTitle" class="small-4 columns end">
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 1em">
+            <div id="content" class="small-12 columns">
+            </div>
+        </div>
+
+        <footer id="footer">
+            <nav data-menu-underline-from-center>
+              <ul class="menu align-center">
+                <li><a href="#" onclick="loadPage('home.html','/ Home')">
+                        <i class="fi-home"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="loadPage('history.html','/ History')">
+                        <i class="fi-list"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="loadPage('options.html','/ Options')">
+                        <i class="fi-widget"></i>
+                    </a>
+                </li>
+              </ul>
+            </nav>
+        <footer>
+        
+    <script>
+        $(document).foundation(); 
+    </script>
+
+</body>
+<html>
+

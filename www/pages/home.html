@@ -1,0 +1,87 @@
+
+
+<div style="text-align: center">
+    <div class="row">
+        <div class="small-12 columns">
+           <b class="headline">Current Weight</b>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="small-12 columns">
+            <b id="currentWeight" style="font-size: 4em;color:dimgrey"></b>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-6 columns">
+            <b class="headline">Compared</b>
+        </div>
+        <div class="small-6 columns">
+            <b class="headline">BMI</b>
+        </div>
+    </div> 
+    <div class="row">
+         <div  class="small-6 columns">
+            <b id="comparedWeight" style="font-size: 2em;"></b>
+        </div>
+        <div class="small-6 columns">
+            <b style="font-size: 2em;color:dimgrey">22</b>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 2em">
+        <div class="small-12 columns">
+            <b id="last_records" class="headline-small"></b>
+        </div>
+    </div> 
+     <div class="row">
+        <div class="small-12 columns">
+            <canvas id="dashboardWeight" width="100" height="70"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="addons\chartjs\dist\Chart.js"></script>
+<script>
+
+    getCurrentWeight(function(result){
+
+        var currentWeightElement=document.getElementById("currentWeight");
+        currentWeightElement.innerHTML=parseFloat(result.weight).toFixed(2)+"kg";
+    });
+
+    loadHomeChart('weight_history',last_records,function(data){
+         
+        var dates=data[0];
+        var weights=data[1];
+        var ctx = document.getElementById("dashboardWeight");
+       
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: dates,
+                datasets: [{
+                    data:weights,
+                    borderColor: ['rgb(35, 62, 89,1)']
+                }]
+            }
+        });
+
+        document.getElementById('last_records').innerHTML="Last "+last_records+" records";
+    });
+
+    compareWeights('weight_history',function(result){
+        var element=document.getElementById('comparedWeight');
+        if(result>0){
+            element.innerHTML="&#9650; +"+result;
+            element.style.color="red";
+        }else if(result<0){
+            element.innerHTML="&#9660; "+result;
+            element.style.color="green";
+        }else{
+              element.innerHTML="&#9679; "+result;
+            element.style.color="lightgrey";
+        }
+    });
+
+</script>
+
+

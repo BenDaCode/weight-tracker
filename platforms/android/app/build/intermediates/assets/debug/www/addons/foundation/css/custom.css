@@ -1,0 +1,100 @@
+h2{
+	color: #2ba6cb;
+}
+
+.sql.basic{
+	color:#f02d2d;
+}
+
+.sql.table{
+	color:blue;
+}
+
+.button{
+	background-color: white;
+	color: #2ba6cb;
+	border: .1em solid #2ba6cb;
+}
+
+.section{
+	float:left;
+	width:100%;
+	padding:.5em;
+}
+
+.section.statement{
+	margin-top: 1em;
+	height:60%;
+}
+
+.section.info{
+	height:30%;
+	border:.05em solid lightgrey;
+	box-shadow: 2px 3px 3px 2px lightgrey;
+}
+
+.section.version{
+	float:left;
+	height:10%;
+}
+
+.tag-cloud-section {
+  padding: .4rem;
+}
+.tag-cloud {
+  margin: .3rem;
+  text-align: left;
+  list-style: none;
+}
+
+.tag-cloud .tag-cloud-individual-tag {
+  display: inline-block;
+  padding: 0.33333rem 0.5rem;
+  border-radius: 0;
+  font-size: 0.7rem;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: default;
+  border: .1em solid #2ba6cb ;
+  border-radius: 5000px ;
+  display: inline-block;
+  color: #2ba6cb;
+  margin: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.tag-cloud .tag-cloud-individual-tag .fa {
+  margin-left: 7px;
+  color: blue;
+}
+
+.tag-cloud .tag-cloud-individual-tag:hover {
+  background: #2ba6cb;
+  color:white;
+  transition: background-color .2s ease-in;
+}
+
+pre {
+	max-height: 20em;
+	padding: .8em;
+	border-radius: .3em;
+	border: .01em solid lightgrey;
+	counter-reset: linecounter;
+	overflow-y: scroll;
+}
+pre span{
+	counter-increment: linecounter;
+}
+pre span:before{
+	color:lightgrey;
+	content: counter(linecounter);
+	width: 2em;
+	display: inline-block;
+	border-right: 1px solid lightgrey;
+}
+
+label{
+	color:dimgrey;
+	font-weight: bold;
+}

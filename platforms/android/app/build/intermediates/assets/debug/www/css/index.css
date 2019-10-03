@@ -1,0 +1,181 @@
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'Calibri';
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+/*button*/
+ .button{
+    background-color: #233e59 !important;
+    color:white;
+    font-size: 1.5em;
+    width:100%;
+ }
+
+ /*headline / highlighting*/
+ b.headline{
+    color:#233e59;
+    font-size: 1.5em;
+    text-transform: uppercase;
+ }
+
+ b.headline-small{
+    color:#233e59;
+    font-size: 1em;
+    text-transform: uppercase;
+ }
+
+  b.headline-low{
+    color:#233e59;
+    font-size: 2em;
+
+ }
+
+ /*setup of icons*/
+ i{
+    font-size: 1.5em;
+ }
+
+ i.small{
+     font-size: 1em;
+ }
+ h3{
+    font-weight: bold !important;
+    font-size: 2em !important;
+ }
+label{
+    color:dimgrey !important;
+}
+
+ .options{
+    font-size: 1.5em;
+    color:dimgrey !important;
+ }
+
+/*topbar setup*/
+.topbar{
+    background-color: #233e59;
+    height: 3.9em;
+    color:white
+}
+.topbar .name{
+    color:white;
+    font-size:1.8em;
+}
+#pageTitle{
+    font-size: 1em;
+    color:white;
+    margin-top: .6em
+}
+
+/*footer / itembar*/
+footer{
+    border-top: .01em solid lightgrey;
+    box-shadow: -2px -4px 15px -10px   rgba(0,0,0,0.70);
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    background-color: white;
+    color:#233e59;
+}
+
+ /*list items*/
+ li{
+    width:30%;
+ }
+ li a{
+    color:#233e59;
+    font-weight: bold;
+    font-size: 1.8em;
+ }
+
+  /*modal*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+
+/*loading animation*/
+.loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #233e59;
+  width: 60px;
+  height: 60px;
+  margin:42%;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
